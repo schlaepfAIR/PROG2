@@ -1,5 +1,13 @@
-Project Idea as of 02MAR22:
-As a aviation enthusiastic I would be able to calculate Flight Miles between two destinations. 
-- Entering departure Airport (IATA Format), Source: ALL IATA Airport Codes
-- Entering arrival Airport (IATA Format), Source: ALL IATA Airport Codes
-- calculation of miles (Based on an existing db or API), if no DB oder API can be used a local file will produced
+# ✈️ Find my Destination✈️
+### by 🐣 schlaepfAIR
+With this python tool you wil have the possibility to search all possible destinations from your entered departure airport. 
+
+schlaepfAIR is a DBM parttime student @ the FHGR in Chur and learning more interesting python stuff during the spring semester 2022.
+
+## Idea of Features
+
+- Import a HTML file and watch it magically convert to Markdown
+- Connect to an openAPI (Amadeus Developer)
+- Get all Flight options from your entered departure Airport (REST: Airport Routes)
+- Get details about the choosen destination airport
+- Share your favorite Flight with Friends
