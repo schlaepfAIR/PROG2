@@ -6,7 +6,6 @@ schlaepfAIR is a DBM parttime student @ the FHGR in Chur and learning more inter
 
 ## Idea of Features
 
-- Import a HTML file and watch it magically convert to Markdown
 - Connect to an openAPI (Amadeus Developer)
 - Get all Flight options from your entered departure Airport (REST: Airport Routes)
 - Get details about the choosen destination airport
