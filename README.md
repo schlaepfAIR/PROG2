@@ -16,5 +16,10 @@ With this python tool you wil have the possibility to save all your Flights, so 
 - Get Airline and/or Airport detailed information from a external source (openAPI)
 - Share your diary via export or link
 
+flowchart LR
+    id
 
+flowchart TD
+    Start --> Stop
+	
 *schlaepfAIR is a DBM parttime student @ the FHGR in Chur and learning more interesting python stuff during the spring semester 2022.*
