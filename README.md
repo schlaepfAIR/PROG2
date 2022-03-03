@@ -23,11 +23,10 @@ flowchart TD
     Start --> Stop
 
 ```mermaid
-  graph TD;
-      A-->B;
-      A-->C;
-      B-->D;
-      C-->D;
+graph TD
+    A[Enter Flight information in FlightForm] --> B{formatCheck / mandatoryCheck}
+    B --> |OK| C[Store Flt Information]
+    B 
 ```	
 	
 	
