@@ -21,5 +21,14 @@ flowchart LR
 
 flowchart TD
     Start --> Stop
+
+```mermaid
+  graph TD;
+      A-->B;
+      A-->C;
+      B-->D;
+      C-->D;
+```	
+	
 	
 *schlaepfAIR is a DBM parttime student @ the FHGR in Chur and learning more interesting python stuff during the spring semester 2022.*
