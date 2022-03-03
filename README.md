@@ -6,7 +6,7 @@ With this python tool you wil have the possibility to save all your Flights, so 
 
 ##### Flight Form:
 - Entering all the relevant Flightinformation
-- Forseen Fields: Date, Flight Number, Airline, Departure, Arrival, *Aircraft, Seat Number
+- Forseen Fields: Date, Flight Number, Airline, Departure, Arrival, *Aircraft, *Seat Number
 
 ##### Overview / Statistic:
 - Chronological list view of entered flights
