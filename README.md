@@ -9,13 +9,13 @@ In addition to your Flightdiary you will see your savings for each fliht
 
 ##### Flight Form:
 
-![Add Flight Form](/images/AddFlight.jpg)
+![Add Flight Form](/img/AddFlight.jpg)
 
 - Entering all the relevant Flightinformation
 
 ##### Overview / Statistic:
 
-![Flight Overview](/images/FlightOverview.jpg)
+![Flight Overview](/img/FlightOverview.jpg)
 
 - Chronological list view of entered flights, including savings
 - Filterfunctionality (Date, Airline, Departure)
