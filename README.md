@@ -41,6 +41,7 @@ The code of this project requires at least python version 3.9.5 or higher.
 - Open your internet browser an enter http://localhost:5000/ or http://127.0.0.1:5000 (debugger mode is active)
 - **first time start:** when you start the application the first time you have to add a flight before you can go to statistics, on the first run, also the csv file will be generated. 
     > Default: in the flight.py on line 15 the filename variable is defined, feel free to change it in whatever you like, it is just important that you still use the .csv fileextension.
+    > **Demo Content:** after starting flight.py you can also open http://localhost:5000/demo. This will create random 350 Flights (issue: no diff price calculation) 
 #
 ***
 ## Architecture
