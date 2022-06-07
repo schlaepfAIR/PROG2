@@ -34,7 +34,7 @@ The code of this project requires at least python version 3.9.5 or higher.
     Random is already a part of the python installation. 
 * OS
     > OS is used for checking if the csv file already exists. 
-    <p>No installation needed, because it is a default python module. 
+    > No installation needed, because it is a default python module. 
 
 ##### installation and startup 
 - After you cloned at least the code-folder you just have to run the flight.py with python. 
