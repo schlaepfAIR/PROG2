@@ -107,4 +107,7 @@ venv.bak/
 .mypy_cache/
 
 # word doc
-.doc
+*.doc
+
+# csv file
+*.csv
