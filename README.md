@@ -29,25 +29,26 @@ In addition to your Flightdiary you will see your savings for each fliht
 ##### _Flow_: 
 
 ```mermaid
-graph TD
-    A[Enter Flight information in FlightForm] --> B{formatCheck / mandatoryCheck}
-    B --> |OK| C[Store Flt Information]
-    B
-```
-
-```mermaid
-graph TD
-        A([Start: run flight.py])--> B{check if *.csv exists}
+flowchart TB
+    subgraph initialize '/'
+    A([Start: run flight.py])--> B{check if *.csv exists}
     B -- Yes --> G
     B -- No --> F
+    end
     F[[create new *.csv]] --> G
-    G[load *.csv and render in table.html] 
+    G[load *.csv and render in table.html]
+
     G --  add Flight --> H
     G --  show Statistics --> I
     I -- go to overview --> G
     H -- go to overview --> G
+    subgraph addFlight '/add' 
     H[[add flight '/add']]
-    I[load stats]
+    end
+    I .-> H
+    subgraph statistics '/stats'
+    I[load stats '/stats']
+    end
 ```
 
 _schlaepfAIR is a DBM parttime student @ the FHGR in Chur and learning more interesting python stuff during the spring semester 2022. In addition this guy works for an airline and is travelling around the world with high employe discounts in the fares_
