@@ -35,6 +35,21 @@ graph TD
     B
 ```
 
+```mermaid
+graph TD
+        A([Start: run flight.py])--> B{check if *.csv exists}
+    B -- Yes --> G
+    B -- No --> F
+    F[[create new *.csv]] --> G
+    G[load *.csv and render in table.html] 
+    G --  add Flight --> H
+    G --  show Statistics --> I
+    I -- go to overview --> G
+    H -- go to overview --> G
+    H[[add flight '/add']]
+    I[load stats]
+```
+
 _schlaepfAIR is a DBM parttime student @ the FHGR in Chur and learning more interesting python stuff during the spring semester 2022. In addition this guy works for an airline and is travelling around the world with high employe discounts in the fares_
 
 ## Components and Installation
