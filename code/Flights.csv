@@ -1,4 +1,0 @@
-created,airline,flightNumber,flightDate,departure,arrival,aircraft,staffPrice,googlePrice,diffPrice
-2022-06-07 09:45:21.798825,LX,1,2022-06-09,ZRH,GVA,A333,120.0,125.0,5.0
-2022-06-07 09:48:09.358001,LX,2,1970-01-02,ZRH,FRA,A330,100.0,105.0,5.0
-2022-06-07 10:03:32.649008,WK,120,1970-01-03,ZRH,PMI,A320,140.0,170.0,30.0

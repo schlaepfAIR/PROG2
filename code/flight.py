@@ -2,13 +2,14 @@
 from flask import Flask
 from flask import render_template
 from flask import request
-from datetime import datetime
+from datetime import datetime, timedelta
 import plotly.express as px
 from plotly.offline import plot
 import pandas as pd  # pandas for dataframe manipulation
 import random  # to create funny colors for the statistics
 import os.path  # to check file exists
 from os import path
+import csv
 
 app = Flask(__name__)
 
@@ -168,6 +169,44 @@ def stats():
 @app.route('/about')
 def about():
     return render_template('about.html')
+
+# create demo data for the flights
+
+
+@app.route('/demo')
+def demo():
+    records = 350
+    fieldnames = ['created', 'airline', 'flightNumber', 'flightDate', 'departure',
+                  'arrival', 'aircraft', 'staffPrice', 'googlePrice', 'diffPrice']
+    writer = csv.DictWriter(open(filename, "w"), fieldnames=fieldnames)
+    airline = ['LX', 'WK', 'LH', 'UA', 'AA', 'B6', 'DL', 'EV', 'F9', 'HA',
+               'HP', 'MQ', 'NK', 'OO', 'PA', 'SQ', 'UA', 'VX', 'WN', 'XE', 'YV', 'ZV']
+    departure = ['ZRH', 'GVA', 'FRA', 'JFK', 'MUC', 'VIE', 'HKG', 'SIN', 'UIO', 'BOG', 'AMS', 'SCL',
+                 'EZE', 'ORD', 'BRU', 'MXP', 'FDH', 'HAM', 'BER', 'LCY', 'OUG', 'SYD', 'IAH', 'IAD', 'SFO']
+    arrival = ['ZRH', 'GVA', 'FRA', 'JFK', 'MUC', 'VIE', 'HKG', 'SIN', 'UIO', 'BOG', 'AMS', 'SCL',
+               'EZE', 'ORD', 'BRU', 'MXP', 'FDH', 'HAM', 'BER', 'LCY', 'OUG', 'SYD', 'IAH', 'IAD', 'SFO']
+    aircraft = ['A320', 'A321', 'A330', 'A340', 'A350', 'A380', 'B747', 'B757',
+                'B767', 'B777', 'B787', 'B789', 'A220', 'E90', 'E95', 'DH8', 'AirForceONE']
+    min_year = 2003
+    max_year = datetime.now().year
+    start = datetime(min_year, 1, 1, 00, 00, 00)
+    years = max_year - min_year+1
+    end = start + timedelta(days=365 * years)
+    writer.writerow(dict(zip(fieldnames, fieldnames)))
+    for i in range(0, records):
+        writer.writerow(dict([
+            ('created', datetime.now()),
+            ('airline', random.choice(airline)),
+            ('flightNumber', str(random.randint(1, 3000))),
+            ('flightDate', start + (end - start) * random.random()),
+            ('departure', random.choice(departure)),
+            ('arrival', random.choice(arrival)),
+            ('aircraft', random.choice(aircraft)),
+            ('staffPrice', str(random.randint(50, 600))),
+            ('googlePrice', str(random.randint(600, 1999))),
+            ('diffPrice', str(random.randint(15, 500)))]))
+
+    return render_template('demo.html', records=records)
 
 
 if __name__ == "__main__":
