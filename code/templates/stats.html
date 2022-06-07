@@ -1,0 +1,83 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>{% block title %} Statistics {% endblock %}</h1>
+
+  <p><strong>Du fliegst am häufigsten mit dem Flugzeug {{ mostaircraft }} und startest am häufigsten von  {{ mostdeparture }}</strong></p>
+  <div class="row">
+    <div class="col-sm-4">
+      <div class="card">
+        <div class="card-body">
+          <img src="https://cdn.pixabay.com/photo/2015/11/17/10/05/piggy-bank-1047211_1280.jpg" class="card-img-top" alt="savings">
+          <h5 class="card-title">Your Total Savings</h5>
+          <h1 class="card-text">CHF {{ sum1  }}</h1>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="card">
+        <div class="card-body">
+          <img src="https://cdn.pixabay.com/photo/2016/04/30/08/35/aircraft-1362586_960_720.jpg" class="card-img-top" alt="flights">
+          <h5 class="card-title">Your Total Flights </h5>
+          <h1 class="card-text">{{ count1 }}</h1>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="card">
+        <div class="card-body">
+          <img src="https://cdn.pixabay.com/photo/2018/02/02/14/41/counting-3125587_960_720.jpg" class="card-img-top" alt="price">
+          <h5 class="card-title">Average Price you payed </h5>
+          <h1 class="card-text">CHF {{ mean1 }}</h1>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="card">
+        <div class="card-body">
+          <img src="https://cdn.pixabay.com/photo/2020/05/23/04/11/transport-5207942_960_720.jpg" class="card-img-top" alt="aircraft">
+          <h5 class="card-title">Your favorite Aircraft </h5>
+          <h1 class="card-text">{{ mostaircraft }}</h1>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="card">
+        <div class="card-body">
+          <img src="https://cdn.pixabay.com/photo/2014/09/07/17/01/passenger-aircraft-437975_960_720.jpg" class="card-img-top" alt="airline">
+          <h5 class="card-title">Your favorite Airline </h5>
+          <h1 class="card-text">{{ mostairline }}</h1>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="card">
+        <div class="card-body">
+          <img src="https://cdn.pixabay.com/photo/2020/02/20/19/48/travel-4865665_960_720.jpg" class="card-img-top" alt="destination">
+          <h5 class="card-title">Your favorite destination </h5>
+          <h1 class="card-text">{{ mostarrival }}</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+<p></p>
+<p></p>
+  <div>
+    <h1 class="display-6">Costsavings</h1>
+    <blockquote class="blockquote">
+      <p>You see the savings per Airline</p>
+    </blockquote>
+    {{div|safe}}
+  </div>
+
+  <div>
+    <h1 class="display-6">Departures of Airport</h1>
+    <blockquote class="blockquote">
+      <p>On the x-axe you see the departure airport, on the y you see the total count of departures from the corresponding airport</p>
+    </blockquote>
+    {{div_dep|safe}}
+  </div>
+
+
+
+  {% endblock %}

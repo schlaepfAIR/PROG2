@@ -26,7 +26,7 @@ In addition to your Flightdiary you will see your savings for each fliht
 - Get Airline and/or Airport detailed information from a external source (openAPI)
 - Share your diary via export or link
 
-##### _Flow_: (more will be added)
+##### _Flow_: 
 
 ```mermaid
 graph TD
@@ -36,3 +36,7 @@ graph TD
 ```
 
 _schlaepfAIR is a DBM parttime student @ the FHGR in Chur and learning more interesting python stuff during the spring semester 2022. In addition this guy works for an airline and is travelling around the world with high employe discounts in the fares_
+
+## Components and Installation
+
+##
