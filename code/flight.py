@@ -13,7 +13,8 @@ import csv
 
 app = Flask(__name__)
 
-filename = 'Flights.csv'  # feel free to change the filename to something else
+# feel free to change the filename to something else
+filename = './code/Flights.csv'
 
 # create a dictionary to map colors to airline for stats
 
@@ -195,7 +196,7 @@ def demo():
 
     writer.writerow(dict(zip(fieldnames, fieldnames)))
     for i in range(0, records):
-        staffprice = float(random.randint(100, 10000))
+        staffprice = float(random.randint(100, 5000))
         googleprice = staffprice * round(random.uniform(1.1, 1.6), 2)
         googleprice = round(googleprice, 2)
         diffprice = (int(googleprice)) - (int(staffprice))
