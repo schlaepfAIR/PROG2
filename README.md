@@ -2,7 +2,15 @@
 ###### With this python tool you will have the possibility to save all your Flights, so you create your own Flightdiary!
 
 ***
-## why this project 
+#### table of contents
+# Table of contents
+1. [Why this project](#project)
+2. [Setup](#setup)
+3. [Architecture](#architecture)
+4. [Unsolved problems and next steps](#unsolved)
+
+***
+## why this project <a name="project"></a>
 There are many flight diaries, but none with the price information. As an airline employee, the flight benefits are an exciting benefit. this project should offer the possibility of a flight diary in which the savings of an airline employee are also recorded.
 
 ##### problem definition
@@ -13,7 +21,7 @@ There are many flight diaries, but none with the price information. As an airlin
 with this tool, flights can be recorded with all relevant information. in addition, the paid price as well as the official price (google.com/flights) can be entered. the application automatically calculates the savings. In the statistics section, the interesting and important key figures are then displayed in a low-threshold from. The flight diary can also be imported as a csv file directly from large providers of official flight diaries.
 
 ***
-## Setup 
+## Setup <a name="project"></a>
 The code of this project requires at least python version 3.9.5 or higher.
 ##### libraries
 
@@ -42,9 +50,9 @@ The code of this project requires at least python version 3.9.5 or higher.
 - **first time start:** when you start the application the first time you have to add a flight before you can go to statistics, on the first run, also the csv file will be generated. 
     > Default: in the flight.py on line 15 the filename variable is defined, feel free to change it in whatever you like, it is just important that you still use the .csv fileextension.
     > **Demo Content:** after starting flight.py you can also open http://localhost:5000/demo. This will create random 350 Flights.
-#
+
 ***
-## Architecture
+## Architecture <a name="architecture"></a>
 ##### _Flow_: 
 
 ```mermaid
@@ -69,14 +77,15 @@ flowchart TB
     I[load stats '/stats']
     end
 ```
-#
+
 ***
-## Unsolved Problems and Improvements
+## Unsolved Problems and Improvements <a name="unsolved"></a>
 - Right now, no possibility to modify flights on the web interface, manually possible in the easy reading csv file
 - No external API connection to validate flight relevant information (i.e. Airportcodes, Airlinecodes)
 
 ***
 
-© schlaepfAIR 
+** © schlaepfAIR **
+
 ***
 _schlaepfAIR is a DBM parttime student @ the FHGR in Chur and learning more interesting python stuff during the spring semester 2022. In addition this guy works for an airline and is travelling around the world with high employe discounts in the fares_
