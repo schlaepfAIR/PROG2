@@ -21,7 +21,7 @@ There are many flight diaries, but none with the price information. As an airlin
 with this tool, flights can be recorded with all relevant information. in addition, the paid price as well as the official price (google.com/flights) can be entered. the application automatically calculates the savings. In the statistics section, the interesting and important key figures are then displayed in a low-threshold from. The flight diary can also be imported as a csv file directly from large providers of official flight diaries.
 
 ***
-## Setup <a name="project"></a>
+## Setup <a name="setup"></a>
 The code of this project requires at least python version 3.9.5 or higher.
 ##### libraries
 
