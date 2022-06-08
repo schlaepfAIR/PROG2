@@ -3,7 +3,7 @@
 
 ***
 #### table of contents
-# Table of contents
+
 1. [Why this project](#project)
 2. [Setup](#setup)
 3. [Architecture](#architecture)
