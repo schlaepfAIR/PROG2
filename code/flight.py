@@ -192,19 +192,24 @@ def demo():
     start = datetime(min_year, 1, 1, 00, 00, 00)
     years = max_year - min_year+1
     end = start + timedelta(days=365 * years)
+
     writer.writerow(dict(zip(fieldnames, fieldnames)))
     for i in range(0, records):
+        staffprice = float(random.randint(100, 10000))
+        googleprice = staffprice * round(random.uniform(1.1, 1.6), 2)
+        googleprice = round(googleprice, 2)
+        diffprice = (int(googleprice)) - (int(staffprice))
         writer.writerow(dict([
             ('created', datetime.now()),
             ('airline', random.choice(airline)),
             ('flightNumber', str(random.randint(1, 3000))),
             ('flightDate', start + (end - start) * random.random()),
+            ('staffPrice', staffprice),
+            ('googlePrice', googleprice),
+            ('diffPrice', diffprice),
             ('departure', random.choice(departure)),
             ('arrival', random.choice(arrival)),
-            ('aircraft', random.choice(aircraft)),
-            ('staffPrice', str(random.randint(50, 600))),
-            ('googlePrice', str(random.randint(600, 1999))),
-            ('diffPrice', str(random.randint(15, 500)))]))
+            ('aircraft', random.choice(aircraft))]))
 
     return render_template('demo.html', records=records)
 
