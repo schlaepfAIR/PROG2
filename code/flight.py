@@ -1,5 +1,4 @@
 # import required libraries
-from cgi import test
 from flask import Flask
 from flask import render_template
 from flask import request
@@ -154,8 +153,8 @@ def stats():
     # create a plotly figure
     fig_airline = px.bar(x=airline, y=diffpreis, color=airline,
                          color_discrete_map=mapping_colorsairline, title="Savings per Airline", labels=dict(x="Airline ", y="Saved money"))
-    fig_airline.update_layout(plot_bgcolor='rgba(0,0,0,0)')                    
-                         
+    fig_airline.update_layout(plot_bgcolor='rgba(0,0,0,0)')
+
     div = plot(fig_airline, output_type="div")
 
     #  return the template with the data
@@ -221,5 +220,3 @@ def demo():
 
 if __name__ == "__main__":
     app.run(debug=True, port=5000)
-
-test
