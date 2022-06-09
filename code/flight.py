@@ -14,7 +14,7 @@ import csv
 app = Flask(__name__)
 
 # feel free to change the filename to something else
-filename = './code/Flights.csv'
+filename = 'Flights.csv'
 
 # create a dictionary to map colors to airline for stats
 
@@ -138,7 +138,8 @@ def stats():
 
     # create a plotly figure
     fig_departure = px.bar(x=abflug, y=abflugzaehler,
-                           color=abflug, color_discrete_map=mapping_colors)
+                           color=abflug, color_discrete_map=mapping_colors, title="Airport departure numbers", labels=dict(x="Departure Airport ", y="Amount"))
+    fig_departure.update_layout(plot_bgcolor='rgba(0,0,0,0)')
     div_dep = plot(fig_departure, output_type="div")
 
     # call airline color function
@@ -151,7 +152,9 @@ def stats():
 
     # create a plotly figure
     fig_airline = px.bar(x=airline, y=diffpreis, color=airline,
-                         color_discrete_map=mapping_colorsairline)
+                         color_discrete_map=mapping_colorsairline, title="Savings per Airline", labels=dict(x="Airline ", y="Saved money"))
+    fig_airline.update_layout(plot_bgcolor='rgba(0,0,0,0)')                    
+                         
     div = plot(fig_airline, output_type="div")
 
     #  return the template with the data
