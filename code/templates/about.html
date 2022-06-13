@@ -7,41 +7,94 @@
 <script type="module" src="https://cdn.jsdelivr.net/gh/zerodevx/zero-md@1/src/zero-md.min.js"></script>
 </head>
 {% block content %}
-<h1>{% block title %} About this Project {% endblock %}</h1>
+<H1>{% block title %}✈️ Your Flightdiary✈️{% endblock %}</H1>
 <div>
-  <nav id="navbar-example3" class="navbar navbar-light bg-light flex-column align-items-stretch p-3">
-    <a class="navbar-brand" href="#">Content</a>
-    <nav class="nav nav-pills flex-column">
-      <a class="nav-link" href="#item-1">Item 1</a>
-      <nav class="nav nav-pills flex-column">
-        <a class="nav-link ms-3 my-1" href="#item-1-1">Item 1-1</a>
-        <a class="nav-link ms-3 my-1" href="#item-1-2">Item 1-2</a>
-      </nav>
-      <a class="nav-link" href="#item-2">Item 2</a>
-      <a class="nav-link" href="#item-3">Item 3</a>
-      <nav class="nav nav-pills flex-column">
-        <a class="nav-link ms-3 my-1" href="#item-3-1">Item 3-1</a>
-        <a class="nav-link ms-3 my-1" href="#item-3-2">Item 3-2</a>
-      </nav>
-    </nav>
-  </nav>
   
-  <div data-bs-spy="scroll" data-bs-target="#navbar-example3" data-bs-offset="0" tabindex="0">
-    <h4 id="item-1">Project itselfs</h4>
-    <p>...</p>
-    <h5 id="item-1-1">Idea</h5>
-    <p>...</p>
-    <h5 id="item-1-2">about schlaepfAIR</h5>
-    <p>...</p>
-    <h4 id="item-2">Implementation</h4>
-    <p>...</p>
-    <h4 id="item-3">Item 3</h4>
-    <p>...</p>
-    <h5 id="item-3-1">Item 3-1</h5>
-    <p>...</p>
-    <h5 id="item-3-2">Item 3-2</h5>
-    <p>...</p>
+  <div>
+    <body>
+        
+        <h6 id="with-this-python-tool-you-will-have-the-possibility-to-save-all-your-flights-so-you-create-your-own-flightdiary">With this python tool you will have the possibility to save all your Flights, so you create your own Flightdiary!</h6>
+        <hr />
+        <h4 id="table-of-contents">table of contents</h4>
+        <ol>
+          <li>
+            <a href="#project">Why this project</a>
+          </li>
+          <li>
+            <a href="#setup">Setup</a>
+          </li>
+          <li>
+            <a href="#architecture">Architecture</a>
+          </li>
+          <li>
+            <a href="#unsolved">Unsolved problems and next steps</a>
+          </li>
+        </ol>
+        <hr />
+        <h2 id="why-this-project">why this project <a name="project"></a></h2>
+        <p>There are many flight diaries, but none with the price information. As an airline employee, the flight benefits are an exciting benefit. this project should offer the possibility of a flight diary in which the savings of an airline employee are also recorded.</p>
+        <h5 id="problem-definition">problem definition</h5>
+        <blockquote>
+          <ul>
+            <li>no recording of the ticket price paid</li>
+            <li>no overview or statistics on the savings with discounted employee tickets</li>
+          </ul>
+        </blockquote>
+        <h5 id="solving-the-problems">solving the problems</h5>
+        <p>with this tool, flights can be recorded with all relevant information. in addition, the paid price as well as the official price (google.com/flights) can be entered. the application automatically calculates the savings. In the statistics section, the interesting and important key figures are then displayed in a low-threshold from. The flight diary can also be imported as a csv file directly from large providers of official flight diaries.</p>
+        <hr />
+        <h2 id="setup">Setup <a name="setup"></a></h2>
+        <p>The code of this project requires at least python version 3.9.5 or higher.</p>
+        <h5 id="libraries">libraries</h5>
+        <ul>
+          <li>Flask
+    <blockquote><p>Flask is a micro web framework written in Python. It is classified as a microframework because it does not require particular tools or libraries.
+    How to install: pip install Flask</p></blockquote></li>
+          <li>Datetime
+    <blockquote><p>Datetime is used to genereate a timestamp of the single flight entry.
+    How to install: pip install datetime</p></blockquote></li>
+          <li>Plotly
+    <blockquote><p>Plotly provides online graphing, analytics, and statistics tools. This library is used to generate statistics in the project.
+    How to install: pip install plotly</p></blockquote></li>
+          <li>Pandas
+    <blockquote><p>pandas is a library for the Python to data manipulation and analysis.
+    How to install: pip install pandas</p></blockquote></li>
+          <li>Random
+    <blockquote><p>This random library is in place for a funny reason, with the library the application will create different colors which are used in the bars of the plots in the statistics section
+    Random is already a part of the python installation.</p></blockquote></li>
+          <li>OS
+    <blockquote><p>OS is used for checking if the csv file already exists.
+    No installation needed, because it is a default python module.</p></blockquote></li>
+        </ul>
+        <h5 id="installation-and-startup">installation and startup</h5>
+        <ul>
+          <li>After you cloned at least the code-folder you just have to run the flight.py with python.</li>
+          <li>Open your internet browser an enter <a href="http://localhost:5000/">http://localhost:5000/</a> or <a href="http://127.0.0.1:5000">http://127.0.0.1:5000</a> (debugger mode is active)</li>
+          <li>
+            <strong>first time start:</strong> when you start the application the first time you have to add a flight before you can go to statistics, on the first run, also the csv file will be generated.
+    <blockquote><p>Default: in the flight.py on line 15 the filename variable is defined, feel free to change it in whatever you like, it is just important that you still use the .csv fileextension.
+    <strong>Demo Content:</strong> after starting flight.py you can also open <a href="http://localhost:5000/demo">http://localhost:5000/demo</a>. This will create random 350 Flights.</p></blockquote></li>
+        </ul>
+        <hr />
+        <h2 id="architecture">Architecture <a name="architecture"></a></h2>
+        <h5 id="flow">
+          <em>Flow</em>:</h5>
+          <div>
+           <img src="static\img\flow.jpg">
+          </div>
+        <hr />
+        <h2 id="unsolved-problems-and-improvements">Unsolved Problems and Improvements <a name="unsolved"></a></h2>
+        <ul>
+          <li>Right now, no possibility to modify flights on the web interface, manually possible in the easy reading csv file</li>
+          <li>No external API connection to validate flight relevant information (i.e. Airportcodes, Airlinecodes)</li>
+        </ul>
+        <hr />
+        <p>** © schlaepfAIR **</p>
+        <hr />
+        <p>
+          <em>schlaepfAIR is a DBM parttime student @ the FHGR in Chur and learning more interesting python stuff during the spring semester 2022. In addition this guy works for an airline and is travelling around the world with high employe discounts in the fares</em>
+        </p>
+      </body>
   </div>
-</div>
 
-{% endblock %}
+  {% endblock %}
